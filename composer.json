@@ -1,0 +1,40 @@
+{
+    "name": "ibnuridho/email-checker",
+    "description": "Email checker for get valid email or not.",
+    "version": "1.0.1",
+    "type": "library",
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ibnu Ridho Rifai",
+            "email": "jakrhifa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Ibnuridho\\EmailChecker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ibnuridho\\EmailChecker\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ibnuridho\\EmailChecker\\Providers\\EmailCheckerServiceProvider"
+            ],
+            "aliases": {
+                "EmailCheck": "Ibnuridho\\EmailChecker\\Facades\\EmailCheck"
+            }
+        }
+    }
+}
